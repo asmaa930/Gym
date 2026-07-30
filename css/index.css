@@ -16,11 +16,17 @@ header nav {
     padding-inline: var(--nav-space-inline);
 
     padding-block: 12px;
-    margin: auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+
+    width: 100%;
 }
 
 header nav .logo h2 a {
@@ -40,7 +46,7 @@ header nav .links input {
 
 header nav .links ul {
     display: flex;
-    gap: 15px;
+    column-gap: 15px;
 
     list-style: none;
     /*inherited to <li>*/
@@ -76,13 +82,14 @@ header nav .links ul li:hover a::after {
 
 /* ________________________________ End_Navbar __________________________________________ */
 
+header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
 header .container .content {
     color: #fff;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 header .container .content h1 {
@@ -149,7 +156,7 @@ header .container .content button:hover {
 
 #About .container .image img {
     display: block;
-    width: 65%;
+    max-width: 65%;
     margin: auto;
 }
 
@@ -162,7 +169,6 @@ header .container .content button:hover {
 #Services {
     background-color: var(--main-color);
 }
-
 
 #Services .container .content .part:not(:last-child) {
     margin-bottom: 50px;
@@ -177,7 +183,6 @@ header .container .content button:hover {
 #Services .container .content .part:nth-of-type(2) {
     flex-direction: row;
 }
-
 
 #Services .container .content .part .icon {
     width: 35%;
@@ -200,7 +205,6 @@ header .container .content button:hover {
     justify-content: center;
     align-items: center;
 }
-
 
 #Services .container .content .part .description {
     width: 65%;
@@ -377,11 +381,6 @@ header .container .content button:hover {
 /* _______________________________________________________ Start_Gallery ____________________________________________ */
 
 #Gallery .container .content {
-    background-color: #f056b5;
-
-}
-
-#Gallery .container .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 300px);
@@ -391,45 +390,37 @@ header .container .content button:hover {
     overflow: hidden;
 }
 
-
 #Gallery .container .content .image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-
 #Gallery .container .content .image:nth-of-type(1) {
     background-image: url("../images/g1-9345a8f7.jpg");
     grid-row: span 2;
 }
 
-
 #Gallery .container .content .image:nth-of-type(2) {
     background-image: url("../images/g5-8ce27a04.jpg");
 }
 
-
 #Gallery .container .content .image:nth-of-type(3) {
     background-image: url("../images/g4-9fc39936.jpg");
 }
-
 
 #Gallery .container .content .image:nth-of-type(4) {
     background-image: url("../images/g6-64027e43.jpg");
     grid-row: span 2;
 }
 
-
 #Gallery .container .content .image:nth-of-type(5) {
     background-image: url("../images/g3-1f7cace9.jpg");
 }
 
-
 #Gallery .container .content .image:nth-of-type(6) {
     background-image: url("../images/g2-9aae0bfa.jpg");
 }
-
 
 #Gallery .container .content .image:nth-of-type(7) {
     background-image: url("../images/g7-9ead7675.jpg");
@@ -439,7 +430,6 @@ header .container .content button:hover {
 
 
 /* _______________________________________________________ Start_Iframe ______________________________________________ */
-
 iframe {
     border: none;
     width: 100%;
@@ -448,7 +438,6 @@ iframe {
 }
 
 /* _______________________________________________________ End_Iframe ________________________________________________ */
-
 
 
 /* _______________________________________________________ Start_Contact ____________________________________________ */
@@ -482,8 +471,6 @@ iframe {
     justify-content: center;
     align-items: center;
 }
-
-
 
 #Contact .container .content .part1 .card .item a {
     line-height: 25px;
@@ -526,7 +513,7 @@ iframe {
     background-color: transparent;
 
     transition-property: box-shadow;
-    transition-duration:  1s;
+    transition-duration: 1s;
 }
 
 #Contact .container .content .part2 form .box .item input:focus,
@@ -617,19 +604,15 @@ footer .container .part1 .box .item .content {
     gap: 15px 20px;
 }
 
-
 footer .container .part1 .box .item .content .image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-
 footer .container .part1 .box .item .content .image:nth-of-type(odd) {
     background-image: url("../images/g2-9aae0bfa.jpg");
 }
-
-
 
 footer .container .part1 .box .item .content .image:nth-of-type(even) {
     background-image: url("../images/g4-9fc39936.jpg");
@@ -645,7 +628,6 @@ footer .container .part1 .box .item .time {
     display: flex;
     justify-content: space-between;
 }
-
 
 footer .container .part1 .box .item .time p {
     color: #fff;

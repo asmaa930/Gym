@@ -31,6 +31,8 @@ h6 {
 
 .container {
     width: 85%;
+    /* for larger screens */
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -41,7 +43,7 @@ footer {
 
 .title {
     text-align: center;
-    margin-bottom:45px ;
+    margin-bottom: 45px;
 }
 
 .title h2 {
