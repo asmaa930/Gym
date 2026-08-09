@@ -3,16 +3,11 @@
 @media (max-width: 992px) {
 
     /* ____________________________ Navbar _______________________ */
-
-    header nav {
-        --nav-space-inline: 30px;
-    }
-
-    header nav .logo h2 a {
+    header nav .container .logo h2 a {
         font-size: 25px;
     }
 
-    header nav .links .burger_menu {
+    header nav .container .links .burger_menu {
         width: 50px;
         height: 40px;
         border: 1px solid #fff;
@@ -26,39 +21,41 @@
         cursor: pointer;
     }
 
-    header nav .links .burger_menu span {
+    header nav .container .links .burger_menu span {
         width: 25px;
         height: 2px;
         background-color: #fff;
     }
 
-    header nav .links ul {
+    header nav .container .links .cover {
         position: absolute;
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        background-color: #fff;
+        overflow: hidden;
+        transition-duration: 0.3s;
         background-color: #000;
         border-radius: 10px;
-
-        height: 0;
-        overflow: hidden;
-
-        transition-duration: 0.3s;
     }
 
-    header nav .links input:checked+ul {
+    header nav .container .links ul {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        height: max-content;
+        padding-block: 20px;
+
+
+    }
+
+    header nav .container .links input:checked+.cover {
 
         /*height: auto; cannot be animated (transition-duration: 1s; not work) 
         because CSS can't calculate intermediate values between 0 and auto. 
         fixed height not recommended ,its solution in JS */
-        height: 320px;
-        padding-block: 20px;
+        max-height: 400px;
     }
 
 
@@ -239,28 +236,28 @@
 
     /* _______________________________________________________ Footer ______________________________________________ */
 
-    footer .container .part1 .box {
+    footer .container .footer-top .box {
         width: 100%;
     }
 
-    footer .container .part1 .box:last-child {
+    footer .container .footer-top .box:last-child {
         margin-top: 20px;
     }
 
-    footer .container .part1 .box .item .content {
+    footer .container .footer-top .box .item .content {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: initial;
         grid-auto-rows: 200px;
     }
 
-    footer .container .part1 .box .item .time {
+    footer .container .footer-top .box .item .time {
         width: 90%;
         margin-inline: auto;
         padding-inline: 10px;
 
     }
 
-    footer .container .part1 .box .item .time:last-child {
+    footer .container .footer-top .box .item .time:last-child {
         margin-bottom: 40px;
     }
 
@@ -284,7 +281,7 @@
     /* _______________________________________________________ Header ______________________________________________ */
 
     /* ____________________________ Navbar _______________________ */
-    header nav .logo h2 a {
+    header nav .container .logo h2 a {
         font-size: 30px;
     }
 
@@ -350,7 +347,7 @@
     /* _______________________________________________________ Header ________________________________________________ */
 
     /* ____________________________ Navbar _______________________ */
-    header nav .logo h2 a {
+    header nav .container .logo h2 a {
         font-size: 40px;
     }
 
@@ -385,17 +382,17 @@
 
     /* _______________________________________________________ Footer ______________________________________________ */
 
-    footer .container .part1 .box .item .content {
+    footer .container .footer-top .box .item .content {
         grid-template-columns: repeat(3, 150px);
         grid-template-rows: repeat(3, 100px);
     }
 
-    footer .container .part1 .box .item .time {
+    footer .container .footer-top .box .item .time {
         width: 400px;
         margin-inline: 0;
     }
 
-    footer .container .part1 .box .item .time:last-child {
+    footer .container .footer-top .box .item .time:last-child {
         margin-bottom: 40px;
     }
 
@@ -422,10 +419,6 @@
 
     #About .container .content h2 {
         font-size: 33px;
-    }
-
-    #About .container .image img {
-        max-width: 82%;
     }
 
     /* _______________________________________________________ Services ______________________________________________ */
@@ -585,30 +578,30 @@
 
     /* _______________________________________________________ Footer ______________________________________________ */
 
-    footer .container .part1 .box {
+    footer .container .footer-top .box {
         width: 33.33%;
     }
 
-    footer .container .part1 .box .item ul a {
+    footer .container .footer-top .box .item ul a {
         font-size: 15px;
 
     }
 
-    footer .container .part1 .box .item .content {
+    footer .container .footer-top .box .item .content {
         grid-template-columns: repeat(3, 90px);
         grid-template-rows: repeat(3, 60px);
     }
 
-    footer .container .part1 .box:last-child .item {
+    footer .container .footer-top .box:last-child .item {
         margin-inline: 20px;
     }
 
-    footer .container .part1 .box .item .time {
+    footer .container .footer-top .box .item .time {
         width: 280px;
     }
 
 
-    footer .container .part1 .box .item .time {
+    footer .container .footer-top .box .item .time {
         padding-inline: 0px;
     }
 
